@@ -1,0 +1,131 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  background-color: #4A2B2C;
+  height: 100%;
+  width: 100%;
+}
+
+.checkerboard {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 800px;
+  width: 800px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  background-color: #FFFFFF;
+  padding: 5px;
+  border: 3px solid #000000;
+}
+
+.item:nth-child(1) {
+  background-color: #000000;
+}
+.item:nth-child(3) {
+  background-color: #000000;
+}
+.item:nth-child(5) {
+  background-color: #000000;
+}
+.item:nth-child(7) {
+  background-color: #000000;
+}
+.item:nth-child(10) {
+  background-color: #000000;
+}
+.item:nth-child(12) {
+  background-color: #000000;
+}
+.item:nth-child(14) {
+  background-color: #000000;
+}
+.item:nth-child(16) {
+  background-color: #000000;
+}
+.item:nth-child(17) {
+  background-color: #000000;
+}
+.item:nth-child(19) {
+  background-color: #000000;
+}
+.item:nth-child(21) {
+  background-color: #000000;
+}
+.item:nth-child(23) {
+  background-color: #000000;
+}
+.item:nth-child(26) {
+  background-color: #000000;
+}
+.item:nth-child(28) {
+  background-color: #000000;
+}
+.item:nth-child(30) {
+  background-color: #000000;
+}
+.item:nth-child(32) {
+  background-color: #000000;
+}
+.item:nth-child(33) {
+  background-color: #000000;
+}
+.item:nth-child(35) {
+  background-color: #000000;
+}
+.item:nth-child(37) {
+  background-color: #000000;
+}
+.item:nth-child(39) {
+  background-color: #000000;
+}
+.item:nth-child(42) {
+  background-color: #000000;
+}
+.item:nth-child(44) {
+  background-color: #000000;
+}
+.item:nth-child(46) {
+  background-color: #000000;
+}
+.item:nth-child(48) {
+  background-color: #000000;
+}
+.item:nth-child(49) {
+  background-color: #000000;
+}
+.item:nth-child(51) {
+  background-color: #000000;
+}
+.item:nth-child(53) {
+  background-color: #000000;
+}
+.item:nth-child(55) {
+  background-color: #000000;
+}
+.item:nth-child(58) {
+  background-color: #000000;
+}
+.item:nth-child(60) {
+  background-color: #000000;
+}
+.item:nth-child(62) {
+  background-color: #000000;
+}
+.item:nth-child(64) {
+  background-color: #000000;
+}
+
+@media (max-width: 1000px) {
+  .checkerboard {
+    position: absolute;
+    inset: 0;
+    transform: scale(0.5);
+  }
+}/*# sourceMappingURL=style.css.map */

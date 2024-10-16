@@ -1,0 +1,68 @@
+@use 'sass:math';
+
+$dark-squares: #000000;
+$light-squares: #FFFFFF;
+$environment-color: #4A2B2C;
+
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: $environment-color;
+    height: 100%;
+    width: 100%;
+    
+    
+}
+
+.checkerboard {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 800px;
+    width: 800px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    background-color: $light-squares;
+    padding: 5px;
+    border: 3px solid #000000;
+ 
+
+   
+}
+
+
+.item {
+    @for $i from 1 through 64{
+        &:nth-child(#{$i}) {
+            $row: ceil(math.div($i, 8));                // give a sqaure a row number, squares 1-8 are row 1, squares 9-16 are row 2, etc
+            $col: $i % 8;                               //gives all squares a column number, for example, 7 % 8 is column 7, 64 % 8 is column 0, 11 % 8 is column 11, etc
+         
+            
+            //switches all even squares' color to dark
+            @if (($row + $col) % 2 == 0) {              //checks both rows and cols for even squares
+                background-color: $dark-squares;
+            } 
+
+        }
+    }
+           
+       
+}
+
+
+@media (max-width: 1000px) {
+    .checkerboard {
+        position: absolute;
+        inset: 0;
+        transform: scale(0.5);
+    }
+}
+    
+
