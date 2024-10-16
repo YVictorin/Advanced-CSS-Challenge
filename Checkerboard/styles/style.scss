@@ -41,10 +41,10 @@ body, html {
 .item {
     @for $i from 1 through 64{
         &:nth-child(#{$i}) {
-            $row: ceil(math.div($i, 8));                // give a sqaure a row number, squares 1-8 are row 1, squares 9-16 are row 2, etc
+            $row: ceil(math.div($i, 8));                // gives all squares a row number, squares 1-8 are row 1, squares 9-16 are row 2, etc
             $col: $i % 8;                               //gives all squares a column number, for example, 7 % 8 is column 7, 64 % 8 is column 0, 11 % 8 is column 11, etc
          
-            
+
             //switches all even squares' color to dark
             @if (($row + $col) % 2 == 0) {              //checks both rows and cols for even squares
                 background-color: $dark-squares;
