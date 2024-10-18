@@ -13,10 +13,14 @@ body, html {
 
 
 table {
-    position: fixed;
+    /* always centers in the exact middle of the screen */
+    position: fixed; 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+
+
     display: grid;
     grid-template-rows: repeat(8, 1fr);
     width: 820px;
@@ -49,6 +53,14 @@ tr:nth-child(odd) div:nth-child(odd) {
     background-color: black;
 }
 
+@media (max-width: 1000px) {
+    .container {
+        position: absolute;
+        inset: 0;
+        transform: scale(0.5);
+      
+    }
+}
 
 
 
