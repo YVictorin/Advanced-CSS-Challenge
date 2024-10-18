@@ -11,34 +11,48 @@ body, html {
     overflow: hidden;
 }
 
+/* probably should have named these stripes */
 td {
     width: 100vw;
-    height: 50px;
+    height: 7.7% /*1/13 is 7.7% for the 13 stripes each*/
     
 }
 
 .flag-container {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    display: grid;
+    grid-template-rows: repeat(2, 7.7%); /*1/13 is 7.7% for the 13 stripes each*/
     width: 100vw;
-    aspect-ratio:  1/1/9;
-   transform: scale(0.7) translateY(-12rem);
+    aspect-ratio: 16 / 9;
     background-color: white;
     
 }
 
+.img-wrapper {
+   
+   
 
-img {
-    transform: scale(0.9);
-    position: relative;
-    z-index: 1;
-    left: 14rem;
-    top: 1.5rem;
+
 }
 
-tr:nth-child(odd) {
+img {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+    /* background-image: url(./images/stars.png); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 53.8%;
+    width: 33%;
+}
+
+
+tr:nth-child(odd), tbody {
     background-color: #BB133E;
    
 }
-
 
