@@ -1,8 +1,10 @@
-const stripeContainer = document.querySelector('.stripes-container');
+const flagContainer = document.querySelector('.flag-container');
 
-for(let i = 0; i < 13; i++) {
-    const stripes = document.createElement('div');
-    stripes.classList.add('stripe',  `stripe-${i}`);
+for(let i = 0; i < 12; i++) {
+    const td = document.createElement('tr');
+    const tr = document.createElement('td');
 
-    stripeContainer.appendChild(stripes);
+    flagContainer.appendChild(td);
+    td.appendChild(tr);
 }
+
